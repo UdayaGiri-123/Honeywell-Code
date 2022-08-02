@@ -1,0 +1,18 @@
+<html>
+    <body>
+      <div>
+        <form name="checked" action="/checked" method="post">
+       <% avmovies.forEach(function(movie,index){ %>
+           <li name="<%=index %>" onclick="this.form.submit()"> <%= movie.Name %> </li> 
+           <ul>
+         <%  movie.Seats.forEach((SeatNo)=>{ %>
+               <li> <%=  SeatNo  %> </li>
+           <% }) %>
+           </ul>
+           <% }) %>
+        </form>
+      </div>
+    </body>
+</html>
+       
+ 
